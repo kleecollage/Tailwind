@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
   <link href="./css/styles.css" rel="stylesheet">
-  <title>First Steps</title>
+  <title>CSS Medium</title>
 </head>
-<body class="h-screen font-['Nunito']">
-  <!-- <div class="text-center text-indigo-100 bg-[steelblue] w-5/6
-    h-screen max-h-96 max-w-7xl">
-    <h1 class="text-2xl">Hello World!</h1>
-    <p class="">Im a paragraph</p>
-  </div> -->
-  <article class="w-5/6 max-w-3xl bg-violet-800 text-white mt-24 mx-auto rounded-b-xl
-  text-center border-5 border-y-[#F2C57C] border-x-[#C38D94] border-b-transparent border-double">
-    <img src="https://cdn.elitebabes.com/content/250303/0001-04_1200.jpg" alt="elite babe" class="w-72 h-72
-    mx-auto mb-4 py-2 px-2 rounded-full object-cover object-[center_0%]" />
-    <h2 class="text-3xl/tight mt-6 mb-4 font-bold">Mila Azul</h2>
-    <p class="text-lg mb-6">Welcome to elite babes!</p>
-    <a href="#" class="bg-white text-violet-800 py-6 px-16 inline-block rounded-t-xl">Call Me</a>
-  </article>
+<body>
+  <nav class="bg-violet-600 h-20 px-8 text-white flex justify-between items-center flex-row-reverse">
+    <h1 class="text-3xl font-bold">Logo.</h1>
+    <div class="flex gap-8 text-lg">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+  <h2 class="text-3xl font-bold text-center my-12">Models Gallery</h2>
+  <section class="w-[90%] mx-auto flex flex-wrap gap-x-8 gap-y-4 ">
+    <img src="./assets/alice_kelly.jpg" class="w-52 h-52 grow object-cover object-[center_15%] order-1">
+    <img src="./assets/julisha.jpg" class="w-52 h-52 grow object-cover order-3">
+    <img src="./assets/lillie_pie.jpg" class="w-52 h-52 grow object-cover object-[center_15%] shrink-0">
+    <img src="./assets/lilu_rose.jpg" class="w-52 h-52 grow object-cover object-[center_15%]">
+    <img src="./assets/nastya.jpg" class="w-52 h-52 grow object-cover object-[center_15%]">
+    <img src="./assets/sonya_blaze.jpg" class="w-52 h-52 grow object-cover object-[center_15%] -order-1">
+  </section>
 </body>
 </html>
