@@ -6,61 +6,57 @@
   <link href="./css/styles.css" rel="stylesheet">
   <title>CSS Medium</title>
 </head>
-<body class="h-[200vh]">
-  <!-- ####################   FLEX   #################### -->
-  <!-- <nav class="bg-violet-600 h-20 px-8 text-white flex flex-row-reverse justify-between
-  items-center fixed inset-x-0 z-20">
-    <h1 class="text-3xl font-bold">Logo.</h1>
-    <div class="flex gap-8 text-lg">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </div>
-  </nav> -->
-  <!-- ####################   FLEX   #################### -->
-  <!-- <h2 class="text-3xl font-bold text-center my-12">Models Gallery</h2>
-  <section class="w-[90%] mx-auto flex flex-wrap gap-x-8 gap-y-4 ">
-    <img src="./assets/alice_kelly.jpg" class="w-52 h-52 grow object-cover object-[center_15%] order-1">
-    <img src="./assets/julisha.jpg" class="w-52 h-52 grow object-cover order-3">
-    <img src="./assets/lillie_pie.jpg" class="w-52 h-52 grow object-cover object-[center_15%] shrink-0">
-    <img src="./assets/lilu_rose.jpg" class="w-52 h-52 grow object-cover object-[center_15%]">
-    <img src="./assets/nastya.jpg" class="w-52 h-52 grow object-cover object-[center_15%]">
-    <img src="./assets/sonya_blaze.jpg" class="w-52 h-52 grow object-cover object-[center_15%] -order-1">
-  </section> -->
-  
-  <!-- ####################   PSEUDO CLASSES #################### -->
-  <!-- hover, active, target, focus, focuswhitin, placeholder-shown, checked -->
-  <!-- <a href="#img" class="p-8 block bg-red-500 w-max">Point Me</a>
-  <a href="#" class="p-8 block bg-red-500 w-max">Stop Point</a> -->
-  <!-- ####################   PSEUDO CLASSES AND GROUP (4 PARENTS) #################### -->
-  <!-- <section class="p-8 bg-amber-300 group/section">
-    <figure class="w-64 h-96 relative top-40 left-20 group/figure overflow-hidden">
-      <p class="absolute inset-0 text-white bg-red-600/50 flex items-center
-        justify-center font-bold text-3xl z-10 group-hover/section:bg-blue-600/50">
-        Im a Text</p>
-      <img id="img" src="./assets/alice_kelly.jpg" class="w-full h-full object-cover relative
-        -translate-2 rotate-1 scale-75 origin-top z-20 active:rotate-45 target:scale-150
-        group-hover/figure:translate-y-full transition">
-    </figure>
+<body class="bg-blue-100 py-20">
+  <!-- ##############################   GRID   ############################## -->
+  <!-- <section class="h-screen grid grid-flow-row gap-8 w-[90%] mx-auto max-w-screen-lg auto-rows-max
+    justify-items-center items-center md:grid-cols-2">
+
+    <img src="./assets/nastya.jpg" class="aspect-square object-cover rounded-full max-w-sm
+      w-4/5 md:rounded-none lg:rounded-full"/>
+
+    <article class="px-8 py-4 grid gap-8">
+      <h1 class="text-3xl font-bold text-center md:text-left md:text-5xl/normal">My name is Nastya. Would you let me into your home?</h1>
+
+      <p class="leading-10 text-gray-600">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Maiores est illum cum illo sapiente,
+        aspernatur sequi aliquam quam alias dignissimos!
+      </p>
+
+      <a href="#" class="bg-blue-700 text-white text-center py-6 rounded-xl font-bold
+        hover:scale-110 transition-transform">
+        Adopt me!</a>
+    </article>
+
   </section> -->
 
-  <!-- <form class="focus-within:bg-green-300 focus-within:translate-y-full">
-    <input type="text" placeholder="Enter your name" class="border border-black block mx-auto
-      mt-10 p-8 focus:bg-red-400 focus:placeholder:text-white focus:text-white">
-  </form>
-  <form>
-    <input type="text" placeholder="Enter your name" class="border border-black block mx-auto
-      mt-10 p-8 placeholder-shown:bg-red-300">
-    <input type="checkbox" class="w-24 h-24 checked:w-56 checked:h-56" />
-  </form> -->
+  <!-- ##############################   COLS / ROWS   ############################## -->
+  <!-- <section class="grid w-4/5 mx-auto gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]"> -->
+  <!-- <section class="grid w-4/5 mx-auto gap-4 grid-rows-6 grid-cols-5">
+    <img src="./assets/alice_kelly.jpg" class="row-span-2 col-span-3 row-start-1 col-start-1"/>
+    <img src="./assets/julisha.jpg" class="row-start-1 row-end-3 col-span-2"/>
+    <img src="./assets/lillie_pie.jpg" class="col-span-3"/>
+    <img src="./assets/lilu_rose.jpg" class="row-start-3 row-end-4 col-start-4 col-end-6"/>
+    <img src="./assets/sonya_blaze.jpg" class="row-start-3 col-start-1 col-end-4"/>
+    <img src="./assets/nastya.jpg" class="col-start-1 col-end-3 row-start-4 row-end-5"/>
+  </section> -->
 
+  <!-- ##############################   ITEMS ALIGNMENT   ############################## -->
+  <!-- <section class="grid w-4/5 mx-auto gap-4 grid-rows-2 grid-cols-2 items-center justify-items-center"> -->
+  <!-- <section class="grid w-4/5 mx-auto gap-4 grid-rows-2 grid-cols-2 place-items-center">
+    <img src="./assets/alice_kelly.jpg" class="h-[60%] self-center justify-self-center"/>
+    <img src="./assets/julisha.jpg" class="h-1/2"/>
+    <img src="./assets/lillie_pie.jpg" class="w-[65%] place-self-center"/>
+    <img src="./assets/lilu_rose.jpg" class="h-1/2"/>
+  </section> -->
 
-  <!-- ####################    TRANSITIONS AND PEER (4 BROTHERS) #################### -->
-  <section class="space-y-4 mt-10 mx-auto w-max">
-    <button class="bg-red-400 text-white w-max p-4 peer/down">Scroll Down</button>
-    <button class="bg-red-400 text-white w-max p-4 peer/right">Scroll Right</button>
-    <img src="./assets/lilu_rose.jpg" class="w-32 h-32 object-cover peer-hover/down:mt-30
-      peer-hover/right:translate-x-full transition-[margin,translate] duration-[2s] ease-in-out delay-500">
+  <section class="grid w-[500px] h-[500px] mx-auto gap-4 grid-rows-[100px,100px]
+    grid-cols-[100px_100px] border-2 border-black place-content-center place-items-center">
+    <img src="./assets/alice_kelly.jpg" class="h-full object-cover"/>
+    <img src="./assets/julisha.jpg" class="h-full object-cover"/>
+    <img src="./assets/lillie_pie.jpg" class="w-full "/>
+    <img src="./assets/lilu_rose.jpg" class="h-full object-cover"/>
   </section>
+
 </body>
 </html>
