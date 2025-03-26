@@ -1,15 +1,48 @@
 @import "tailwindcss";
 
 @theme{
-  --font-josefin: "Josefin Sans", "sans-serif";
+  --font-dm: "DM Sans", sans-serif;
+  --color-green: #27AE60;
+  --color-gray: #828282;
+  --color-card: #212121;
+  --color-background: #171717;
+  --color-menu: #172554;
 }
 
-@layer components {
-  .input-reset{
-    @apply border-b border-b-black outline-0 font-light p-2
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold
+  }
+  input, textarea {
+    @apply bg-background border-gray;
   }
 }
 
-.bg-lap-image {
-  background-image: url('../assets/1.jpg');
+@layer components {
+  .open-menu {
+    @apply bg-[url('../assets/menu.svg')] bg-cover bg-center;
+  }
+  .icons-container {
+    @apply p-4 w-max aspect-square bg-card rounded-full
+  }
+  .icons{
+    @apply fill-green w-10
+  }
+  .focus-input {
+    @apply outline-0 focus:ring-1 focus:ring-green focus:ring-inset transition
+  }
+}
+
+@layer utilities {
+  .clip-circle-0 {
+    clip-path: circle(0% at top right)!important;
+  }
+
+  .clip-circle-full {
+    clip-path: circle(150% at top right)!important;
+  }
+
+  .cols-auto {
+    @apply grid-cols-[repeat(auto-fit,minmax(200px,1fr))]
+  }
 }
