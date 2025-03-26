@@ -1,48 +1,49 @@
 @import "tailwindcss";
 
-@theme{
-  --font-dm: "DM Sans", sans-serif;
-  --color-green: #27AE60;
-  --color-gray: #828282;
-  --color-card: #212121;
-  --color-background: #171717;
-  --color-menu: #172554;
+@theme {
+  /* FONT */
+  --font-inter: "Inter", sans-serif;
+  /* PRIMARY */
+  --color-lime-green: hsl(163, 72%, 41%);
+  --color-bright-red: hsl(356, 69%, 56%);
+  --color-facebook: hsl(208, 92%, 53%);
+  --color-twitter: hsl(203, 89%, 53%);
+  --color-instagram-first: hsl(37, 97%, 70%);
+  --color-instagram-second: hsl(329, 70%, 58%);
+  --color-youtube: hsl(348, 97%, 39%);
+  /* DARK THEME */
+  --color-gradient-switch-first: hsl(210, 78%, 56%);
+  --color-gradient-switch-second:hsl(146, 68%, 55%);
+  --color-very-dark-blue: hsl(230, 17%, 14%);
+  --color-very-dark-blue-top: hsl(232, 19%, 15%);
+  --color-dark-desaturated-blue: hsl(228, 28%, 20%);
+  --color-desaturated-blue: hsl(228, 34%, 66%);
+  /* LIGHT THEME */
+  --color-toggle-light: hsl(230, 22%, 74%);
+  --color-very-pale-blue: hsl(225, 100%, 98%);
+  --color-light-grayish-blue: hsl(227, 47%, 96%);
+  --color-dark-grayish-blue: hsl(228, 12%, 44%);
+  /* NEUTRAL */
+  --color-white: hsl(0, 0%, 100%);
 }
 
-@layer base {
-  h1, h2, h3, h4, h5, h6 {
+@layer base{
+  h1, h2, h3, h4,  h5, h6 {
     @apply font-bold
-  }
-  input, textarea {
-    @apply bg-background border-gray;
   }
 }
 
 @layer components {
-  .open-menu {
-    @apply bg-[url('../assets/menu.svg')] bg-cover bg-center;
+  .toggle-switch {
+    @apply peer-checked:bg-gradient-to-r from-gradient-switch-first to-gradient-switch-second
+  peer-checked:[--bg-circle:hsl(228,28%,20%)]
+    peer-checked:[--transform-circle:-100%]
   }
-  .icons-container {
-    @apply p-4 w-max aspect-square bg-card rounded-full
-  }
-  .icons{
-    @apply fill-green w-10
-  }
-  .focus-input {
-    @apply outline-0 focus:ring-1 focus:ring-green focus:ring-inset transition
+  .card-stats{
+    @apply grid grid-cols-[min-content_max-content] grid-rows-[max-content_max-content]
+    justify-between items-center gap-y-12 content-center
   }
 }
 
-@layer utilities {
-  .clip-circle-0 {
-    clip-path: circle(0% at top right)!important;
-  }
-
-  .clip-circle-full {
-    clip-path: circle(150% at top right)!important;
-  }
-
-  .cols-auto {
-    @apply grid-cols-[repeat(auto-fit,minmax(200px,1fr))]
-  }
-}
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
