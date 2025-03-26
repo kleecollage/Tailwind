@@ -1,52 +1,15 @@
 @import "tailwindcss";
 
-@theme {
-  --color-mint-500: oklch(0.72 0.11 178);
-  --color-primary: #ff6961;
-  --color-green: #77dd77;
-  --color-yellow: #fdfd96;
-  --color-blue: #84b6f4;
-  --color-pink: #fdcae1;
-  --color-avocado-100: oklch(0.99 0 0);
-  --color-avocado-200: oklch(0.98 0.04 113.22);
-  --color-avocado-300: oklch(0.94 0.11 115.03);
-  --color-avocado-400: oklch(0.92 0.19 114.08);
-  --color-avocado-500: oklch(0.84 0.18 117.33);
-  --color-avocado-600: oklch(0.53 0.12 118.34);
-
-  --breakpoint-tablet:  800px;
-  --breakpoint-phone:  500px;
-
-  --spacing-10px: 10px;
-  --spacing-20px: 20px;
-  --spacing-30px: 30px;
-  --spacing-40px: 40px;
+@theme{
+  --font-josefin: "Josefin Sans", "sans-serif";
 }
 
-/* IMPORTANT: Styles are applied in cascade */
-/* Layer directives */
 @layer components {
-  .btn {
-    @apply bg-pink inline-block py-4 px-8 text-white rounded-md
-  }
-
-  .btn-blue {
-    @apply bg-blue
-  }
-
-  .wrapper {
-    @apply w-[90%] mx-auto max-w-screen-xl overflow-hidden;
+  .input-reset{
+    @apply border-b border-b-black outline-0 font-light p-2
   }
 }
 
-@layer base {
-  h1 {
-    @apply text-3xl font-bold
-  }
-}
-
-@layer utilities {
-  .bg-image-center {
-    @apply bg-center bg-cover
-  }
+.bg-lap-image {
+  background-image: url('../assets/1.jpg');
 }
